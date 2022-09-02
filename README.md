@@ -7,6 +7,9 @@ Trackmania Inputs Viewer is a streaming tool intended to display inputs while pl
 - Download the the lastest version (0.5)
 - Execute the application
 
+## Input support
+- Keyboard
+
 ## Compatibility
 #### Works
 - Windows 10 x64
