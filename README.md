@@ -3,7 +3,7 @@
 Trackmania Inputs Viewer is a streaming tool intended to display inputs while playing Trackmania or other racing games.
 
 ## Install
-- Go to the [release](Releases) folder
+- Go to the [lastest release](Releases/0.5)
 - Download the the lastest version (0.5)
 - Execute the application
 
