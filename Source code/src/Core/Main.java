@@ -17,7 +17,7 @@ import Libraries.Timer;
 
 
 /*
- * Trackmania Input Viewer is being developed by Asgaroth Wrynn (https://github.com/Asgaroth-Wrynn)
+ * @author Asgaroth Wrynn (https://github.com/Asgaroth-Wrynn)
  * 
  * this application may be used by anyone
  * 
@@ -54,8 +54,11 @@ public class Main {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
+		
+		DisplaySettings.LoadSettings();
+		
 		frame = new JFrame();
+		DisplaySettings.setOpeningPos(frame);
 		frame.setTitle("Trackmania Inputs Viewer");
 		frame.setSize(DisplaySettings.WIDTH + 16, DisplaySettings.HIGTH + 39);
 		frame.setResizable(false);
@@ -66,11 +69,17 @@ public class Main {
 
 		KeyboardHook kbhook = new KeyboardHook();
 		new Thread(kbhook).start();
+		
+		
 
 		frame.addWindowListener(new WindowAdapter() {
 			@Override
 			public void windowClosing(WindowEvent event) {
+				DisplaySettings.SaveSettings(frame.getLocation());
+				
 				kbhook.setHookOff();
+				
+				System.exit(0);
 			}
 		});
 	}

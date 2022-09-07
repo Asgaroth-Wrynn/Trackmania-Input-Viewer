@@ -100,6 +100,5 @@ public class KeyboardHook implements Runnable {
 	public void setHookOff() {
 		System.out.println("Hook Off!");
 		User32.INSTANCE.UnhookWindowsHookEx(hhk);
-		System.exit(0);
 	}
 }
